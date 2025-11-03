@@ -1,0 +1,101 @@
+:root {
+  /* Dark Theme - Neutral Grey with Blue/Green Accents */
+  --background-primary: #1a1d23;        /* Dark blue-grey background */
+  --background-secondary: #252930;      /* Medium grey for cards/panels */
+  --background-tertiary: #2f3640;       /* Lighter grey accents */
+  
+  /* Text Colors - Inverted for dark theme */
+  --text-primary: #e8ecf1;              /* Soft off-white (matches original light theme) */
+  --text-secondary: #b0bac5;            /* Light grey for body */
+  --text-tertiary: #999999;             /* Medium grey for subtle text */
+  --text-inverse: #ffffff;              /* White text on colored backgrounds */
+  
+  /* Accent Colors - Elegant Blue-Green theme */
+  --accent-primary: #4a90a4;            /* Elegant blue-green for primary actions */
+  --accent-primary-hover: #3a7a8d;      /* Darker blue-green on hover */
+  --accent-secondary: #5da5b8;          /* Lighter blue-green */
+  --accent-success: #5ba3b7;            /* Bright blue-green for success */
+  --accent-success-hover: #4a8fa3;      /* Darker bright blue-green */
+  --accent-warning: #d4a574;            /* Keep muted gold (priority medium) */
+  --accent-danger: #c77c7c;             /* Keep muted red (priority high) */
+  
+  /* Border & Divider Colors - Dark theme borders */
+  --border-light: #464646;              /* Medium grey borders */
+  --border-medium: #5a5a5a;             /* Lighter grey borders */
+  --border-dark: #707070;               /* Even lighter borders */
+  
+  /* Shadow Colors - Darker shadows for depth */
+  --shadow-light: rgba(0, 0, 0, 0.15);
+  --shadow-medium: rgba(0, 0, 0, 0.25);
+  --shadow-heavy: rgba(0, 0, 0, 0.35);
+  
+  /* Priority Colors - Blue Spectrum */
+  --high-priority-color: #8b7db8;       /* Bluish-purple (urgent, important) */
+  --medium-priority-color: #6a9bd6;     /* Clear blue (balanced attention) */
+  --low-priority-color: #5dae9f;        /* Bluish-green/teal (calm, routine) */
+  
+  /* Legacy support */
+  --background-color: var(--background-primary);
+  --text-color: var(--text-primary);
+  --button-background: var(--accent-primary);
+  --button-hover: var(--accent-primary-hover);
+}
+
+/* Import fonts: Montserrat for headings, Inter for body text, JetBrains Mono for times */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+.App {
+  text-align: center;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+h1 {
+  margin: 12px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  color: var(--text-primary);
+  letter-spacing: -0.02em; /* Tighter spacing for elegance */
+}
+
+.fc {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  margin-bottom: -15px;
+}
+
+.app-logo {
+  height: 3.5em; 
+  margin-right: 15px;
+}
+
+.weather {
+  position: absolute;
+  right: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.3em;
+  color: var(--text-primary);
+}
+
+.weather.error {
+  color: var(--accent-danger);
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.clock {
+  position: absolute;
+  right: calc(20px + 1.3em + 20px); 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.3em;
+}
