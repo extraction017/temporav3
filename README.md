@@ -80,15 +80,21 @@ TEMPORA is an intelligent calendar optimization system that helps you improve yo
 ### Prerequisites
 - Python 3.8+
 - Node.js 16+
+- OpenWeatherMap API key (free at https://openweathermap.org/api)
 
 ### Installation
 
 **Windows (Automated):**
 ```powershell
-# Terminal 1: Start Backend
+# Step 1: Configure Environment
+cd frontend
+copy .env.example .env
+# Edit .env and add your OpenWeatherMap API key
+
+# Step 2: Start Backend
 .\setup_backend.bat
 
-# Terminal 2: Start Frontend
+# Step 3: Start Frontend
 .\setup_frontend.bat
 
 # Open http://localhost:5173
@@ -108,6 +114,10 @@ python app.py
 **Frontend:**
 ```powershell
 cd frontend
+# Copy and configure environment variables
+copy .env.example .env
+# Edit .env and add your OpenWeatherMap API key
+
 npm install
 npm run dev
 # Running on http://localhost:5173
