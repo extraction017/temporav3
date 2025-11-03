@@ -196,26 +196,7 @@ npm run dev
 | **[ARCHITECTURE.md](ARCHITECTURE.md)** | System design, data flow, component structure |
 | **[DOCUMENTATION.md](DOCUMENTATION.md)** | Complete API reference, algorithms, troubleshooting |
 
----
 
-## 📊 Project Statistics
-
-```
-Lines of Code:     2,285
-  ├─ Backend:      1,358 (Python)
-  └─ Frontend:     927 (React/JSX)
-
-Components:
-  ├─ API Endpoints:  7
-  ├─ Database Tables: 2
-  ├─ React Components: 6
-  └─ Event Types:    3
-
-Performance:       50-70% faster conflict detection
-Status:            Production-ready
-```
-
----
 
 ## 🔐 Security & Limitations
 
@@ -232,97 +213,48 @@ Status:            Production-ready
 3. **7-Day Optimization Limit** - Maximum range for optimizer
 4. **No Undo** - Event changes are permanent
 
-### Production Deployment Requirements
-For multi-user deployment, add:
-- User authentication (JWT/OAuth)
-- HTTPS with SSL certificates
-- API rate limiting
-- CSRF protection
-- PostgreSQL database
-
----
-
-## 🐛 Troubleshooting
-
-### Backend won't start
-
-```powershell
-# Check if port 5000 is in use
-netstat -ano | findstr :5000
-
-# Reinstall dependencies
-cd backend
-.\venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-
-# Reset database
-Remove-Item events.db
-python -c "from database import db; db.init_db()"
-```
-
-### Frontend won't start
-
-```powershell
-# Clear cache and reinstall
-cd frontend
-Remove-Item -Recurse -Force node_modules
-npm install
-npm run dev
-```
-
-### CORS Errors
-
-The backend now supports both port 5173 and 5174. If you see CORS errors:
-1. Verify backend is running: `http://localhost:5000/events`
-2. Check `app.py` CORS configuration includes your port
-3. Restart backend server
-
-### Events not showing
-
-1. Open browser console (F12) for errors
-2. Check backend is responding: `http://localhost:5000/events`
-3. Refresh the page (Ctrl+F5)
-
 ---
 
 ## 🚦 Future Roadmap
 
-### High Priority
-- [ ] User authentication & authorization
-- [ ] Undo/redo functionality
-- [ ] Loading indicators & better error messages
-- [ ] Dark mode
-- [ ] Mobile responsive design
+### Production Deployment
+- [ ] **User authentication & authorization** (JWT/OAuth)
+- [ ] **Multi-user support** with device sync
+- [ ] **HTTPS deployment** with SSL certificates
+- [ ] **API security** (rate limiting, CSRF protection)
+- [ ] **PostgreSQL database** for production scale
 
-### Medium Priority
-- [ ] Export to iCal/Google Calendar
-- [ ] Email/push notifications
-- [ ] Event templates
-- [ ] Drag-and-drop editing
+### Algorithm Enhancements
+- [ ] **Optimize scheduling algorithms** for better performance
+- [ ] **Enhanced scoring systems** with more metrics
+- [ ] **Machine learning** for personalized recommendations
 
-### Low Priority
-- [ ] Natural language event creation
-- [ ] External calendar integration
-- [ ] Mobile app (iOS/Android)
-- [ ] Team/shared calendars
+### User Testing & Validation
+- [ ] **Extensive user testing** with real users
+- [ ] **Feedback integration** and UX improvements
+- [ ] **Performance benchmarking** across different scenarios
 
 ---
 
 ## 📈 Version History
 
-### v2.1 (Current - October 2025)
-- ✅ Health & Productivity scoring systems
-- ✅ One-click optimizations with preview
-- ✅ Event validation warnings
-- ✅ CORS support for ports 5173/5174
-- ✅ Enhanced break scheduling
-- ✅ Improved error handling
+### October 2025 - JuFo Prototype
+First prototype developed for "Jugend forscht" competition:
+- ❌ No database or data persistence
+- ❌ Poor event architecture (5 event types including separate preferred time events)
+- ❌ Non-functional rescheduling
+- ❌ Basic UI with no scoring or preference systems
+- ✅ Core concept and initial scheduling logic
 
-### v2.0 (October 2025)
-- ✅ All 8 core features implemented
-- ✅ Optimized performance (50-70% improvement)
-- ✅ Complete documentation
-- ✅ Production-ready quality
+### October-November 2025 - Current Version
+Complete rebuild with enhanced features:
+- ✅ SQLite database with persistent storage
+- ✅ Streamlined 3 event types (Fixed, Recurring, Floating)
+- ✅ Functional optimization algorithm with preview
+- ✅ Health & Productivity scoring systems
+- ✅ Modern UI with FullCalendar integration
+- ✅ User preferences and actionable recommendations
+- ✅ Break scheduling and conflict prevention
 
 ---
 
