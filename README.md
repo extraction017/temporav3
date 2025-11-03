@@ -326,9 +326,12 @@ The backend now supports both port 5173 and 5174. If you see CORS errors:
 
 ---
 
-## 📄 License
+## 📄 License & Usage
 
-MIT License - Feel free to use and modify for personal or commercial projects.
+© 2025 [Your Name]. All Rights Reserved.
+
+This project is a school assignment and is made public for portfolio purposes only.
+Copying, distribution, or use of this code is not permitted without explicit permission.
 
 ---
 
