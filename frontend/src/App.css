@@ -94,7 +94,7 @@ h1 {
 
 .clock {
   position: absolute;
-  right: calc(20px + 1.3em + 20px); 
+  right: calc(20px + 1.3em + 40px); 
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 1.3em;
